@@ -4,7 +4,7 @@
 #
 Name     : R-reactlog
 Version  : 1.0.0
-Release  : 9
+Release  : 10
 URL      : https://cran.r-project.org/src/contrib/reactlog_1.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reactlog_1.0.0.tar.gz
 Summary  : Reactivity Visualizer for 'shiny'
@@ -12,34 +12,30 @@ Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-jsonlite
 BuildRequires : R-jsonlite
-BuildRequires : R-shiny
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-# reactlog
-[![Travis Build Status](https://travis-ci.org/rstudio/reactlog.svg?branch=master)](https://travis-ci.org/rstudio/reactlog)
-[![CRAN version](http://www.r-pkg.org/badges/version/reactlog)](https://cran.r-project.org/package=reactlog)
-[![reactlog downloads per month](http://cranlogs.r-pkg.org/badges/reactlog)](http://www.rpackages.io/package/reactlog)
-[![DOI](https://zenodo.org/badge/137799634.svg)](https://zenodo.org/badge/latestdoi/137799634)
+with 'shiny'. Behind the scenes, 'shiny' builds a reactive graph that can
+  quickly become intertwined and difficult to debug. 'reactlog'
 
 %prep
 %setup -q -c -n reactlog
+cd %{_builddir}/reactlog
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571885450
+export SOURCE_DATE_EPOCH=1589403916
 
 %install
-export SOURCE_DATE_EPOCH=1571885450
+export SOURCE_DATE_EPOCH=1589403916
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
