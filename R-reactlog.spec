@@ -4,13 +4,15 @@
 #
 Name     : R-reactlog
 Version  : 1.0.0
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/reactlog_1.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reactlog_1.0.0.tar.gz
 Summary  : Reactivity Visualizer for 'shiny'
 Group    : Development/Tools
 License  : GPL-3.0
+Requires: R-htmltools
 Requires: R-jsonlite
+BuildRequires : R-htmltools
 BuildRequires : R-jsonlite
 BuildRequires : buildreq-R
 
@@ -27,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589403916
+export SOURCE_DATE_EPOCH=1589757638
 
 %install
-export SOURCE_DATE_EPOCH=1589403916
+export SOURCE_DATE_EPOCH=1589757638
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
