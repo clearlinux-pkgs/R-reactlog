@@ -4,7 +4,7 @@
 #
 Name     : R-reactlog
 Version  : 1.1.0
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/reactlog_1.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/reactlog_1.1.0.tar.gz
 Summary  : Reactivity Visualizer for 'shiny'
